@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <title>Greeting Card From Yunyun & JiangLi</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <!-- 新增 jQuery库 -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+</head>
+
+<body>
+    <h1></h1>
+    <div class="card">
+        <div>
+            <div class="blessing-text" id="blessingText">
+                <%=blessing %>
+            </div>
+        </div>
+    </div>
+
+    <div>
+        <button class="regen-btn" id="regenBtn"> 重新生成</button>
+        <button class="download-btn" id="downloadBtn"> 下载图片</button>
+    </div>
+
+    <script src="/js/script.js"></script>
+</body>
+
+</html>
