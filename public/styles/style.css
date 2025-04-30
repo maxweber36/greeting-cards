@@ -14,6 +14,16 @@ body {
     padding: 10px;
 }
 
+.card {
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+    border-radius: 15px;
+}
+
 .header {
     display: flex;
     align-items: center;
@@ -33,16 +43,9 @@ body {
     margin-right: 10px;
 }
 
-.container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
-    border-radius: 15px;
-}
 
-.card {
+
+.card-content {
     width: 80%;
     max-width: 600px;
     height: auto;

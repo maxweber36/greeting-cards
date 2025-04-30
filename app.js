@@ -28,11 +28,14 @@ const englishBlessings = [
 ];
 
 
+const defaultChineseFontFamily = "'Huiwenmincho', sans-serif"; // 或者你希望的其他默认中文字体
+const defaultEnglishFontFamily = "'Courier New', monospace"; // 或者你希望的其他默认英文字体
+
+
 
 const chineseFontFamilies = [
   "'Huiwenmincho', sans-serif",       // 怀文铭刻 (日文)
 ];
-
 const englishFontFamilies = [
   "'Courier New', monospace",      // Courier New (等宽字体)
 ];
@@ -46,8 +49,8 @@ app.get("/", (req, res) => {
   const randomChineseBlessing = chineseBlessings[indexBlessing];
   const randomEnglishBlessing = englishBlessings[indexBlessing];
 
-  const randomChineseFontFamily = chineseFontFamilies[Math.floor(Math.random() * chineseFontFamilies.length)];
-  const randomEnglishFontFamily = englishFontFamilies[Math.floor(Math.random() * englishFontFamilies.length)];
+  const randomChineseFontFamily = defaultChineseFontFamily;
+  const randomEnglishFontFamily = defaultEnglishFontFamily;
   res.render("index.ejs", {chineseBlessing:randomChineseBlessing, chineseFontFamily:randomChineseFontFamily, englishBlessing:randomEnglishBlessing, englishFontFamily:randomEnglishFontFamily});
 });
 
