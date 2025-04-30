@@ -15,19 +15,28 @@
 </head>
 
 <body>
-    <h1></h1>
-    <div class="card">
-        <div>
-            <div class="blessing-text" id="blessingText">
-                <%=blessing %>
+    <div class="container">
+        <div class="header">
+            <img id="avatar" src="/images/yunyun-jiangli.png" alt="yunyun-jiangli">
+            <h1 id="title">Greeting Card From Yunyun & JiangLi</h1>
+        </div>
+        <div class="card">
+            <img class="main-image" src="/images/yunyun-jiangli.png" alt="文章封面图片">
+            <div>
+                <div class="blessing-text" id="chineseBlessingText" style="font-family: <%=chineseFontFamily%>;">
+                    <%=chineseBlessing %>
+                </div>
+                <div class="blessing-text" id="englishBlessingText" style="font-family: <%=englishFontFamily%>;">
+                    <%=englishBlessing %>
+                </div>
             </div>
         </div>
     </div>
-
     <div>
         <button class="regen-btn" id="regenBtn"> 重新生成</button>
         <button class="download-btn" id="downloadBtn"> 下载图片</button>
     </div>
+
 
     <script src="/js/script.js"></script>
 </body>

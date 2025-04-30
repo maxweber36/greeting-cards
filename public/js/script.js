@@ -2,7 +2,8 @@ $(document).ready(() => {
     // 重新生成按钮点击事件
     $('#regenBtn').click(() => {
         $.get('/get/random-blessing', (data) => {
-        $('#blessingText').text(data.blessing);
+        $('#chineseBlessingText').text(data.chineseBlessing).css('font-family', data.chineseFontFamily);
+        $('#englishBlessingText').text(data.englishBlessing).css('font-family', data.englishFontFamily);
         }).fail(() => {
         alert('获取祝福语失败，请重试！');
         });
