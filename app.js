@@ -1,11 +1,22 @@
 import express from "express";
 import bodyParser from "body-parser";
+import path from 'path'; // 导入 path 模块
+import { fileURLToPath } from 'url'; // 导入 url 模块
+
+const __filename = fileURLToPath(import.meta.url); // 获取当前文件的 URL
+const __dirname = path.dirname(__filename); // 获取当前文件所在的目录
 
 const app = express();
 const port = process.env.PORT || 3000;
 
+// 设置视图文件存放的目录
+app.set('views', path.join(__dirname, 'views'));
+// 设置视图引擎为 ejs
+app.set('view engine', 'ejs');
+
 // 配置静态文件
 app.use(express.static('public'));
+app.use(bodyParser.urlencoded({ extended: true })); // 建议替换为 express.urlencoded({ extended: true })
 
 const chineseBlessings = [
     "祝你在美满人生中，总能如尝所愿 \n 口袋总有钱币，入夜总有人陪伴",
@@ -73,9 +84,6 @@ const englishFontFamilies = [
   // 'monospace',      // Courier New (等宽字体)
 ];
 
-
-app.use(express.static("public"));
-app.use(bodyParser.urlencoded({ extended: true }));
 
 app.get("/", (req, res) => {
   const indexBlessing = Math.floor(Math.random() * chineseBlessings.length);
