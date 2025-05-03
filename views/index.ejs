@@ -17,12 +17,12 @@
 <body>
     <div class="card">
         <div class="header">
-            <img id="avatar" src="/images/yunyun-jiangli.png" alt="yunyun-jiangli">
-            <h1 id="title">Greeting Card From Yunyun & JiangLi</h1>
+            <img id="avatar" src="/images/avatar.png" alt="yunyun-jiangli">
+            <h1 id="title">来自 蒋理&李赟赟的祝福</h1>
         </div>
         <div class="card-content">
-            <img class="main-image" src="/images/yunyun-jiangli.png" alt="文章封面图片">
-            <div>
+            <img class="main-image" src="/images/covers/cover-0.png" alt="祝福封面图片">
+            <div id="blessing-text-container">
                 <div class="blessing-text" id="chineseBlessingText" style="font-family: <%=chineseFontFamily%>;">
                     <%=chineseBlessing %>
                 </div>
@@ -30,13 +30,21 @@
                     <%=englishBlessing %>
                 </div>
             </div>
+            <div class="card-quote">
+                <p id="quote-text" style="font-family: <%=englishFontFamily%>;">
+                    <%=quote %>
+                </p>
+                <!-- <img id="quote-image" src="/images/quotes/quote-<%=indexBlessing%>.jpg" alt="the cover of the music"> -->
+            </div>
+        </div>
+        <div class="card-footer">
+            ❤️🤵‍♂️👰🏻
         </div>
     </div>
     <div>
         <button class="regen-btn" id="regenBtn"> 重新生成</button>
-        <button class="download-btn" id="downloadBtn"> 下载图片</button>
+        <button class="download-btn" id="downloadBtn"> 下载祝福</button>
     </div>
-
 
     <script src="/js/script.js"></script>
 </body>

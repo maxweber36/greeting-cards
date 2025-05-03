@@ -3,6 +3,11 @@
     src: url('../fonts/Huiwenmincho.otf') format('opentype');
 }
 
+@font-face {
+    font-family: 'jf-openhuninn';
+    src: url('../fonts/jf-openhuninn.ttf') format('truetype');
+}
+
 body {
     display: flex;
     flex-direction: column;
@@ -14,6 +19,12 @@ body {
     padding: 10px;
 }
 
+#title {
+    font-size: 20px;
+    color: #fff;
+    font-family: 'jf-openhuninn';
+}
+
 .card {
     max-width: 300px;
     display: flex;
@@ -22,28 +33,28 @@ body {
     justify-content: center;
     background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
     border-radius: 15px;
+    padding: 31px 32px;
+    margin: 10px 0;
+    gap: 21px;
 }
 
 .header {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    padding: 20px;
+    gap: 10px;
 }
 
 #title {
     font-size: clamp(10px, 10vw, 20px);
-    color: #fff;
+    color: #000;
 }
 
 #avatar {
-    width: 50px;
-    height: 50px;
+    width: 57px;
+    height: 57px;
     border-radius: 50%;
     margin-right: 10px;
 }
-
-
 
 .card-content {
     width: 80%;
@@ -53,14 +64,13 @@ body {
     border: 1px solid #fff;
     border-radius: 15px;
     box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-    padding: 20px;
-    margin: 20px;
+    padding: 15px;
+    margin: 0px 10px 20px 10px;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
-    color: white;
-    text-align: center;
+    color:#000;
 }
 
 .main-image {
@@ -69,17 +79,25 @@ body {
 }
 
 .blessing-text {
-    line-height: 1.5;
-    padding: 15px;
+    line-height: 2;
     text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+    white-space: pre-line; /* 这会让浏览器保留换行符并进行换行 */
+}
+
+#blessing-text-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 10px;
 }
 
 #chineseBlessingText {
-    font-size: clamp(18px, 10vw, 30px);
+    font-size: 20px;
 }
 
 #englishBlessingText {
-    font-size: clamp(9px, 5vw, 15px);
+    font-size: 15px;
 }
 
 button {
@@ -102,6 +120,34 @@ button:hover {
 
 #blessingText {
     color: aliceblue;
+    text-align: left;
+}
+
+.card-quote {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 10px;
+    align-self: stretch;
+}
+
+#quote-image {
+    width: 30px;
+    height: auto;
+    border-radius: 5px;
+}
+
+#quote-text {
+    font-size: 10px;
+    color: #000;
+    text-align: right;
+}
+
+.card-footer {
+    font-size: 10px;
+    font-family: 'Huiwenmincho';
+    color: #fff;
+    text-align: center;
 }
 
 /* 移动端优化 */

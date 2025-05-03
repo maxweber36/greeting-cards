@@ -4,6 +4,7 @@ $(document).ready(() => {
         $.get('/get/random-blessing', (data) => {
         $('#chineseBlessingText').text(data.chineseBlessing).css('font-family', data.chineseFontFamily);
         $('#englishBlessingText').text(data.englishBlessing).css('font-family', data.englishFontFamily);
+        console.log(data.chineseFontFamily);
         }).fail(() => {
         alert('获取祝福语失败，请重试！');
         });
@@ -24,7 +25,7 @@ $(document).ready(() => {
         'left': '-9999px',
         'top': '-9999px',
         'width': '300px', // 可以保持原始尺寸，或设为固定值
-        'height': '585px',
+        'height': 'auto',
     })
 
     // 将克隆元素添加到body中
@@ -32,9 +33,6 @@ $(document).ready(() => {
 
     // 对克隆元素进行截图
     html2canvas(cardClone, {
-        // 可以根据需要添加html2canvas的配置选项
-        // 例如：useCORS: true 如果卡片包含跨域图片
-         // 例如：scale: 2  // 提高截图分辨率
     }).then(canvas => {
        const link = document.createElement('a');
        link.download = "祝福卡片.png";
