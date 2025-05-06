@@ -71,7 +71,7 @@ const quotes = [
   "——Hymn For The Weekend . Alan Walker/Coldplay",
 ];
 
-const defaultChineseFontFamily = "'Huiwenmincho', sans-serif"; // 或者你希望的其他默认中文字体
+const defaultChineseFontFamily = "'jf-openhuninn', sans-serif"; // 或者你希望的其他默认中文字体
 const defaultEnglishFontFamily = "'Courier New', monospace"; // 或者你希望的其他默认英文字体
 
 const chineseFontFamilies = [
