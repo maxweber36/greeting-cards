@@ -117,10 +117,13 @@ app.get("/get/random-blessing", (req, res) => {
 
 // 注意：在 Vercel 上部署时，app.listen 不会被调用，Vercel 会处理服务启动
 // 但本地开发时仍然需要它
-if (process.env.NODE_ENV !== 'production') { // 可以在本地开发时监听端口
-    app.listen(port, () => {
-      console.log(`Server running on port: ${port}`);
-    });
+
+const assignedPort = process.env.PORT || 3000
+
+if (!process.env.VERCEL) {
+  app.listen(assignedPort, () => {
+    console.log(`Server running at http://localhost:${assignedPort}`);
+  });
 }
 
 // 导出 app 供 Vercel 使用
