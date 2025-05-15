@@ -4,6 +4,7 @@ $(document).ready(() => {
         $.get('/get/random-blessing', (data) => {
         $('#chineseBlessingText').text(data.chineseBlessing).css('font-family', data.chineseFontFamily);
         $('#englishBlessingText').text(data.englishBlessing).css('font-family', data.englishFontFamily);
+        $('#quote-text').text(data.quote);
         console.log(data.chineseFontFamily);
         }).fail(() => {
         alert('获取祝福语失败，请重试！');
